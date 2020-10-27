@@ -1,10 +1,13 @@
 $block-color: #1e1e1f;
-$poster-color: #e2dedb;
+$page-color: #e2dedb;
 
 * {
   margin: 0;
   padding: 0;
-  font-weight: "Helvetica";
+}
+
+html {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .poster {
@@ -13,5 +16,37 @@ $poster-color: #e2dedb;
   grid-template-rows: repeat(16, 1fr);
   width: 100%;
   height: 100vh;
-  background: $poster-color;
+  background: $page-color;
+}
+.b-one {
+  grid-column: 1/4;
+  grid-row: 11/15;
+  background: $block-color;
+}
+.b-two {
+  grid-column: 4/12;
+  grid-row: 6/8;
+  background: $block-color;
+}
+.b-three {
+  grid-column: 16/18;
+  grid-row: 8/11;
+  background: $block-color;
+}
+.b-four {
+  grid-column: 11/30;
+  grid-row: 15/17;
+  background: $block-color;
+}
+.b-five {
+  grid-column: 30/34;
+  grid-row: 1/11;
+  background: $block-color;
+}
+.textblock {
+  grid-column: 6/28;
+  grid-row-end: 14;
+  .textblock__caption {
+    font-size: 12px;
+  }
 }
